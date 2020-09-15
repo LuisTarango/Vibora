@@ -1,3 +1,6 @@
+#Luis Fernando Tarango Falix   A00827678
+#Hiram David Arguelles Ramirez A00826301
+
 from turtle import * 
 from random import randrange
 from freegames import square, vector
@@ -22,18 +25,16 @@ def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
-    "Variable escoge la direccion del movimiento de la comida"
-    r=randrange(4) 
-    "Booleano para revisar que la comida se haya movido un paso" 
-    check=False 
-    "El ciclo correra hasta que la comida se haya podido mover dentro de los limites del area de juego"
-    while check==False: 
+    
+    r=randrange(4) #Variable escoge la direccion del movimiento de la comida
+    
+    check=False #Booleano para revisar que la comida se haya movido un paso
+    
+    while check==False: #El ciclo correra hasta que la comida se haya podido mover dentro de los limites del area de juego
         if r==0:
-            "Los ifs compruban que la comida se pueda mover sin salirse del rango"
-            if food.x <=140:
+            if food.x <=140:#Los ifs compruban que la comida se pueda mover sin salirse del rango
                 food.x=food.x+10
-                "Si se mueve la comida se completa el ciclo"
-                check=True
+                check=True#Si se mueve la comida se completa el ciclo
             else:
                 r=randrange(4)
         if r==1:
