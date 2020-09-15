@@ -22,30 +22,39 @@ def move():
     "Move snake forward one segment."
     head = snake[-1].copy()
     head.move(aim)
-    r=randrange(4)
-    check=False
-    while check==False:
+    "Variable escoge la direccion del movimiento de la comida"
+    r=randrange(4) 
+    "Booleano para revisar que la comida se haya movido un paso" 
+    check=False 
+    "El ciclo correra hasta que la comida se haya podido mover dentro de los limites del area de juego"
+    while check==False: 
         if r==0:
+            "Los ifs compruban que la comida se pueda mover sin salirse del rango"
             if food.x <=140:
                 food.x=food.x+10
+                "Si se mueve la comida se completa el ciclo"
+                check=True
             else:
                 r=randrange(4)
         if r==1:
             if food.x >=-140:
                 food.x=food.x-10
+                check=True
             else:
                 r=randrange(4)
         if r==2:
             if food.y <=140:
                 food.y=food.y+10
+                check=True
             else:
                 r=randrange(4)
         if r==3:
             if food.y >=-140:
                 food.y=food.y-10
+                check=True
             else:
                 r=randrange(4)
-        check=True
+        
 
     if not inside(head) or head in snake:
         square(head.x, head.y, 9, 'red')
