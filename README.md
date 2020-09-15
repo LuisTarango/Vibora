@@ -1,1 +1,2 @@
 # Vibora
+#Juego de snake de la paqueteria freegames modificado para que la comida se mueva un paso en direccion al azar a la vez de la serpiente y que ambos tengan un color randomizado al inicio de cada partida
