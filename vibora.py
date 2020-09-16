@@ -10,8 +10,14 @@ aim = vector(0, -10)
 #Lista de colores para elegir aleatoriamente 
 colors = ['navy', 'orange', 'green','purple','pink']
 
-snakeColor = random.choice(colors) #Se elije el color aleatorio del cuerpo de la vibora 
-foodColor = random.choice(colors) #Se elije el color aleatorio de la comida
+color=True
+while (color==True):
+    snakeColor = random.choice(colors) #Se elije el color aleatorio del cuerpo de la vibora 
+    foodColor = random.choice(colors) #Se elije el color aleatorio de la comida
+    if snakeColor==foodColor:
+        color=True
+    else:
+        color=False
 
 def change(x, y):
     "Change snake direction."
